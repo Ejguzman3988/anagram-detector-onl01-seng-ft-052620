@@ -6,24 +6,18 @@ class Anagram
 
     def initialize(new_word)
         @word = new_word
-        @anagram = []
+        
 
     end
 
    
     def match(anagram_words_a)
 
-        matched_words =  []
+        
 
-        anagram_words_a.each do |ana_words|
+        anagram_words_a.select{|a_word| a_word.split("").sort == @word.split("").sort}
 
-            if word.split("").sort == ana_words.split("").sort
-                matched_words << ana_words
-            end
-
-        end
-
-        matched_words
+        
         
 
 
